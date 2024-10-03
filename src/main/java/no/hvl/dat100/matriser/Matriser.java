@@ -27,9 +27,8 @@ public class Matriser {
 				
 				tekst += " ";
 		}
-			if(i < matrise.length -1) {
+			
 				tekst += "\n";
-			}
 				
 		}
 		return tekst;
