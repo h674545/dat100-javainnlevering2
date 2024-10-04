@@ -69,15 +69,21 @@ public class Tabeller {
 
 	// f)
 	public static int[] reverser(int[] tabell) {
+		
+		if (tabell == null) {
+            return null;
+        }
 
-		for(int i = 0; i< tabell.length / 2; i++) 
-		{
-			int midlertidig = tabell[i];
-			tabell[i] = tabell[tabell.length - i - 1];
-			tabell[tabell.length - i - 1] = midlertidig;
-		}
-		return tabell;
-	}
+        int lengde = tabell.length;
+        int[] revTabell = new int[lengde];
+
+        for (int i = 0; i < lengde; i++) {
+            revTabell[i] = tabell[lengde - 1 - i];
+        }
+
+        return revTabell;
+
+    }
 
 	// g)
 	public static boolean erSortert(int[] tabell) {
